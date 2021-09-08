@@ -13,7 +13,7 @@ const SuperheroTable = (props) => {
             </thead>
             <tbody>
                 {props.superheroes.map(superhero =>(
-                    <tr>
+                    <tr key={superhero.superheroID}>
                         <td>{superhero.name}</td>
                         <td>{superhero.primaryAbility}</td>
                         <td>{superhero.secondarAbility}</td>
