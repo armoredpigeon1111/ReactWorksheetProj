@@ -11,7 +11,7 @@ class App extends Component {
         this.state = {
             firstName: 'Reggie',
             lastName: 'White',
-            names: ['Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly'],
+            names: [' Mike', 'Nevin', 'Aaron', 'Tory', 'Kelly'],
             superheroes : [
                 {
                     superheroId: 1,
@@ -35,27 +35,20 @@ class App extends Component {
         };
     }
 
-    addNames = () =>{
-        let i = 0;
-        let nameList = [];
-        for(i = 0, i < this.names.length; i++;){
-            nameList = <li>{this.state.names[i]}</li>
-        }
-        this.setState({
-            names: nameList
-        });
-    }
 
+    //Alert user
     alertUser = () =>{
         alert("devCodeCamp");
     }
+
+
 
     render(){
         return(
             <div className="container-fluid">
             <h1>React Worksheet</h1>
             <DisplayName firstName = {this.state.firstName} lastName = {this.state.lastName} />
-            <NamesList names = {this.addNames} names = {this.state.names} />
+            <NamesList names = {this.state.names} />
             <AlertUser userAlert = {this.alertUser}/>
             </div>
 
