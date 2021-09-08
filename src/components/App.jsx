@@ -3,6 +3,7 @@ import './App.css'
 import DisplayName from './DisplayName/DisplayName'
 import NamesList from "./NamesList/NamesList";
 import AlertUser from "./AlertUser/AlertUser";
+import SuperheroTable from "./SuperheroTable/SuperheroTable";
 
 
 class App extends Component {
@@ -50,6 +51,7 @@ class App extends Component {
             <DisplayName firstName = {this.state.firstName} lastName = {this.state.lastName} />
             <NamesList names = {this.state.names} />
             <AlertUser userAlert = {this.alertUser}/>
+            <SuperheroTable superheroes = {this.state.superheroes} />
             </div>
 
         )
