@@ -3,9 +3,9 @@ import React from 'react';
 const NamesList = (props) => {
     return ( 
         <ul>
-            {props.names.map(function(name, index){
-                return <li key={index}>{name}</li>
-            })}
+            {props.names.map(name =>(
+                <li>{name}</li>
+            ))}
         </ul>
      );
 }
