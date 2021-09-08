@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './App.css'
 import DisplayName from './DisplayName/DisplayName'
+import NamesList from "./NamesList/NamesList";
 
 class App extends Component {
     constructor(props){
@@ -37,6 +38,7 @@ class App extends Component {
             <div className="container-fluid">
             <h1>React Worksheet</h1>
             <DisplayName firstName = {this.state.firstName} lastName = {this.state.lastName} />
+            <NamesList names = {this.state.names} />
             </div>
 
         )
