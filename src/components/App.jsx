@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import './App.css'
 import DisplayName from './DisplayName/DisplayName'
 import NamesList from "./NamesList/NamesList";
+import AlertUser from "./AlertUser/AlertUser";
+
 
 class App extends Component {
     constructor(props){
@@ -33,12 +35,28 @@ class App extends Component {
         };
     }
 
+    addNames = () =>{
+        let i = 0;
+        let nameList = [];
+        for(i = 0, i < this.names.length; i++;){
+            nameList = <li>{this.state.names[i]}</li>
+        }
+        this.setState({
+            names: nameList
+        });
+    }
+
+    alertUser = () =>{
+        alert("devCodeCamp");
+    }
+
     render(){
         return(
             <div className="container-fluid">
             <h1>React Worksheet</h1>
             <DisplayName firstName = {this.state.firstName} lastName = {this.state.lastName} />
-            <NamesList names = {this.state.names} />
+            <NamesList names = {this.addNames} names = {this.state.names} />
+            <AlertUser userAlert = {this.alertUser}/>
             </div>
 
         )

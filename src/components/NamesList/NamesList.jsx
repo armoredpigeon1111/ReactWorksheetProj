@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 const NamesList = (props) => {
     return ( 
         <div>
-            <ul>{props.names}  </ul>
+            <ul>{props.names} </ul>
         </div>
      );
 }
