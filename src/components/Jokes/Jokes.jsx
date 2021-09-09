@@ -32,7 +32,7 @@ class Jokes extends Component {
           return (
             <span>
               <h1>{joke.setup}</h1>
-              <h1>{joke.delivery}</h1>
+              <h1>{joke.delivery}</h1><br/>
             </span>
           );
         })}
