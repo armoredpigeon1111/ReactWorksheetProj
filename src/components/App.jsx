@@ -4,6 +4,9 @@ import DisplayName from './DisplayName/DisplayName'
 import NamesList from "./NamesList/NamesList";
 import AlertUser from "./AlertUser/AlertUser";
 import SuperheroTable from "./SuperheroTable/SuperheroTable";
+import SuperheroCreateForm from "./SuperheroCreateForm/SuperheroCreateForm";
+import axios from "axios";
+import Jokes from "./Jokes/Jokes";
 
 
 class App extends Component {
@@ -33,6 +36,7 @@ class App extends Component {
                     secondarAbility: 'Shoots web'
                 }
             ]
+            
         };
     }
 
@@ -41,6 +45,19 @@ class App extends Component {
     alertUser = () =>{
         alert("devCodeCamp");
     }
+
+    createSuperhero = (newHero) =>{
+        debugger;
+        let tempSuperheroes = this.state.superheroes;
+        tempSuperheroes.push(newHero);
+        this.setState({
+            superheroes: tempSuperheroes
+        });
+    }
+
+
+
+    
 
 
 
@@ -52,6 +69,8 @@ class App extends Component {
             <NamesList names = {this.state.names} />
             <AlertUser userAlert = {this.alertUser}/>
             <SuperheroTable superheroes = {this.state.superheroes} />
+            <SuperheroCreateForm createSuperhero={this.createSuperhero}/>
+            <Jokes />
             </div>
 
         )
